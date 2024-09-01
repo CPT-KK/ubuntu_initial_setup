@@ -27,8 +27,9 @@ sudo apt upgrade -y
 # Install particular packages
 sudo apt install -y net-tools wireless-tools locales language-pack-zh-hans python3-pip docker.io libsensors5 lm-sensors stress s-tui cmake upower
 
-# Update pip
-sudo pip3 install --upgrade pip
+# Update pip and set source
+python3 -m pip install --upgrade pip
+pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 
 # Configure Docker
 sudo adduser $USER docker
